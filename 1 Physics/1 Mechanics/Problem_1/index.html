@@ -48,6 +48,32 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#projectile-motion-description-with-equations">Projectile Motion Description with Equations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-assumptions-in-projectile-motion">1. Assumptions in Projectile Motion:</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-equations-of-motion">2. Equations of Motion:</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#horizontal-motion-constant-velocity">Horizontal Motion (Constant Velocity):</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#vertical-motion-accelerated-motion-due-to-gravity">Vertical Motion (Accelerated Motion due to Gravity):</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-key-parameters-in-projectile-motion">3. Key Parameters in Projectile Motion:</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-time-of-flight-total-time-the-projectile-remains-in-the-air">(a) Time of Flight (Total time the projectile remains in the air)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#b-maximum-height-highest-point-reached-by-the-projectile">(b) Maximum Height (Highest point reached by the projectile)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#c-range-total-horizontal-distance-covered">(c) Range (Total horizontal distance covered)</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-summary">4. Summary:</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -172,7 +198,68 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<p>Panashe</p>
+<h3 id="projectile-motion-description-with-equations"><strong>Projectile Motion Description with Equations</strong></h3>
+<p>Projectile motion describes the motion of an object launched into the air under the influence of gravity, following a curved trajectory called a <strong>parabola</strong>. It is analyzed as two separate motions in <strong>horizontal</strong> and <strong>vertical</strong> directions.</p>
+<h4 id="1-assumptions-in-projectile-motion"><strong>1. Assumptions in Projectile Motion:</strong></h4>
+<ul>
+<li>The only force acting on the projectile (neglecting air resistance) is <strong>gravity</strong> (<span class="arithmatex">\( g = 9.81 \, m/s^2 \)</span>).</li>
+<li>The motion is <strong>independent in horizontal and vertical directions</strong>.</li>
+<li>The horizontal motion has <strong>constant velocity</strong> (no acceleration).</li>
+<li>The vertical motion has <strong>uniform acceleration</strong> due to gravity.</li>
+</ul>
+<hr/>
+<h3 id="2-equations-of-motion"><strong>2. Equations of Motion:</strong></h3>
+<p>Let:
+- <span class="arithmatex">\( v_0 \)</span> = initial velocity<br/>
+- <span class="arithmatex">\( \theta \)</span> = launch angle<br/>
+- <span class="arithmatex">\( v_{0x} = v_0 \cos\theta \)</span> (initial horizontal velocity)<br/>
+- <span class="arithmatex">\( v_{0y} = v_0 \sin\theta \)</span> (initial vertical velocity)<br/>
+- <span class="arithmatex">\( g = 9.81 \, m/s^2 \)</span> (acceleration due to gravity)<br/>
+- <span class="arithmatex">\( t \)</span> = time<br/>
+- <span class="arithmatex">\( x \)</span> = horizontal displacement<br/>
+- <span class="arithmatex">\( y \)</span> = vertical displacement  </p>
+<h4 id="horizontal-motion-constant-velocity"><strong>Horizontal Motion (Constant Velocity):</strong></h4>
+<p>[
+x = v_{0x} t = (v_0 \cos\theta) t
+]<br/>
+[
+v_x = v_0 \cos\theta
+]<br/>
+<span class="arithmatex">\(\Rightarrow\)</span> No acceleration in the horizontal direction.</p>
+<h4 id="vertical-motion-accelerated-motion-due-to-gravity"><strong>Vertical Motion (Accelerated Motion due to Gravity):</strong></h4>
+<p>[
+y = v_{0y} t - \frac{1}{2} g t^2
+]
+[
+v_y = v_{0y} - g t
+]<br/>
+<span class="arithmatex">\(\Rightarrow\)</span> Velocity decreases until the projectile reaches the highest point, then increases downward.</p>
+<hr/>
+<h3 id="3-key-parameters-in-projectile-motion"><strong>3. Key Parameters in Projectile Motion:</strong></h3>
+<h4 id="a-time-of-flight-total-time-the-projectile-remains-in-the-air"><strong>(a) Time of Flight</strong> (Total time the projectile remains in the air)</h4>
+<p>[
+T = \frac{2 v_0 \sin\theta}{g}
+]<br/>
+(derived from setting <span class="arithmatex">\( y = 0 \)</span> when the projectile lands)</p>
+<h4 id="b-maximum-height-highest-point-reached-by-the-projectile"><strong>(b) Maximum Height</strong> (Highest point reached by the projectile)</h4>
+<p>[
+H = \frac{(v_0 \sin\theta)^2}{2g}
+]<br/>
+(derived by setting <span class="arithmatex">\( v_y = 0 \)</span> at the peak)</p>
+<h4 id="c-range-total-horizontal-distance-covered"><strong>(c) Range</strong> (Total horizontal distance covered)</h4>
+<p>[
+R = \frac{v_0^2 \sin 2\theta}{g}
+]<br/>
+(This is maximized when <span class="arithmatex">\( \theta = 45^\circ \)</span>)</p>
+<hr/>
+<h3 id="4-summary"><strong>4. Summary:</strong></h3>
+<ul>
+<li>The <strong>horizontal component</strong> remains constant (<span class="arithmatex">\( x = v_{0x} t \)</span>).</li>
+<li>The <strong>vertical component</strong> follows free-fall motion under gravity (<span class="arithmatex">\( y = v_{0y} t - \frac{1}{2} g t^2 \)</span>).</li>
+<li>The <strong>time of flight, maximum height, and range</strong> depend on the initial velocity and angle of projection.</li>
+<li>The <strong>trajectory is a symmetric parabola</strong>.</li>
+</ul>
+<p>Would you like a diagram or a real-world example? 🚀</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
