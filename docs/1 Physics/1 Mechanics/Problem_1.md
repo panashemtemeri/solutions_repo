@@ -71,4 +71,3 @@ R = \frac{v_0^2 \sin 2\theta}{g}
 - The **time of flight, maximum height, and range** depend on the initial velocity and angle of projection.
 - The **trajectory is a symmetric parabola**.
 
-Would you like a diagram or a real-world example? 🚀
