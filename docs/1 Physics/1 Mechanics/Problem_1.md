@@ -21,7 +21,7 @@ Let:
 - \( g = 9.81 \, m/s^2 \) (acceleration due to gravity)  
 - \( t \) = time  
 - \( x \) = horizontal displacement  
-- \( y \) = vertical displacement  
+- \( y \) = vertical displacement
 
 #### **Horizontal Motion (Constant Velocity):**  
 \[
