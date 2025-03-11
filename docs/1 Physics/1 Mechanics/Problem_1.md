@@ -5,6 +5,7 @@
 Projectile motion describes the motion of an object launched into the air under the influence of gravity, following a curved trajectory called a **parabola**. It is analyzed as two separate motions in **horizontal** and **vertical** directions.
 
 #### **1. Assumptions in Projectile Motion:**
+
 - The only force acting on the projectile (neglecting air resistance) is **gravity** (\( g = 9.81 \, m/s^2 \)).
 - The motion is **independent in horizontal and vertical directions**.
 - The horizontal motion has **constant velocity** (no acceleration).
@@ -13,7 +14,9 @@ Projectile motion describes the motion of an object launched into the air under 
 ---
 
 ### **2. Equations of Motion:**
+
 Let:
+
 - \( v_0 \) = initial velocity  
 - \( \theta \) = launch angle  
 - \( v_{0x} = v_0 \cos\theta \) (initial horizontal velocity)  
@@ -21,12 +24,12 @@ Let:
 - \( g = 9.81 \, m/s^2 \) (acceleration due to gravity)  
 - \( t \) = time  
 - \( x \) = horizontal displacement  
-- \( y \) = vertical displacement
+- $y$ = vertical displacement
 
 #### **Horizontal Motion (Constant Velocity):**  
-\[
+$$
 x = v_{0x} t = (v_0 \cos\theta) t
-\]  
+$$  
 \[
 v_x = v_0 \cos\theta
 \]  
