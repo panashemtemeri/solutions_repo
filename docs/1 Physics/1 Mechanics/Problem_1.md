@@ -69,7 +69,7 @@ $$
 ---
 
 ### **4. Summary:**
-- The **horizontal component** remains constant ($x = v_{0x} t $.
+- The **horizontal component** remains constant $x = v_{0x} t$
 - The **vertical component** follows free-fall motion under gravity $y = v_{0y} t - \frac{1}{2} g t^2$.
 - The **time of flight, maximum height, and range** depend on the initial velocity and angle of projection.
 - The **trajectory is a symmetric parabola**.
