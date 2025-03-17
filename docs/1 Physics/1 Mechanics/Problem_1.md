@@ -75,8 +75,9 @@ R = \frac{v_0^2 \sin 2\theta}{g}
 - The **trajectory is a symmetric parabola**.
 
 
-## Projectile Motion Simulation
+# Projectile Motion Simulation
 
 The following graph shows the trajectory of a projectile launched at different angles.
 
-![Projectile Motion](projectile_motion.png)
+![Projectile Motion](/Users/simonmtemeri/Documents/solutions_repo/docs/projectile_motion.pngprojectile_motion.png)
+
