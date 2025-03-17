@@ -74,6 +74,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#4-summary">4. Summary:</a>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#projectile-motion-simulation">Projectile Motion Simulation</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -202,7 +204,7 @@
 <p>Projectile motion describes the motion of an object launched into the air under the influence of gravity, following a curved trajectory called a <strong>parabola</strong>. It is analyzed as two separate motions in <strong>horizontal</strong> and <strong>vertical</strong> directions.</p>
 <h4 id="1-assumptions-in-projectile-motion"><strong>1. Assumptions in Projectile Motion:</strong></h4>
 <ul>
-<li>The only force acting on the projectile (neglecting air resistance) is <strong>gravity</strong> (<span class="arithmatex">\( g = 9.81 \, m/s^2 \)</span>).</li>
+<li>The only force acting on the projectile (neglecting air resistance) is <strong>gravity</strong> <span class="arithmatex">\(g = 9.81 \, m/s^2\)</span>.</li>
 <li>The motion is <strong>independent in horizontal and vertical directions</strong>.</li>
 <li>The horizontal motion has <strong>constant velocity</strong> (no acceleration).</li>
 <li>The vertical motion has <strong>uniform acceleration</strong> due to gravity.</li>
@@ -211,13 +213,13 @@
 <h3 id="2-equations-of-motion"><strong>2. Equations of Motion:</strong></h3>
 <p>Let:</p>
 <ul>
-<li><span class="arithmatex">\( v_0 \)</span> = initial velocity  </li>
-<li><span class="arithmatex">\( \theta \)</span> = launch angle  </li>
-<li><span class="arithmatex">\( v_{0x} = v_0 \cos\theta \)</span> (initial horizontal velocity)  </li>
-<li><span class="arithmatex">\( v_{0y} = v_0 \sin\theta \)</span> (initial vertical velocity)  </li>
-<li><span class="arithmatex">\( g = 9.81 \, m/s^2 \)</span> (acceleration due to gravity)  </li>
-<li><span class="arithmatex">\( t \)</span> = time  </li>
-<li><span class="arithmatex">\( x \)</span> = horizontal displacement  </li>
+<li><span class="arithmatex">\(v_0\)</span> = initial velocity  </li>
+<li><span class="arithmatex">\(\theta\)</span> = launch angle  </li>
+<li>$v_{0x} = v_0 \cos\theta ) (initial horizontal velocity)  </li>
+<li>$v_{0y} = v_0 \sin\theta ) (initial vertical velocity)  </li>
+<li>$g = 9.81 \, m/s^2 ) (acceleration due to gravity)  </li>
+<li>$t ) = time  </li>
+<li>$x ) = horizontal displacement  </li>
 <li><span class="arithmatex">\(y\)</span> = vertical displacement</li>
 </ul>
 <h4 id="horizontal-motion-constant-velocity"><strong>Horizontal Motion (Constant Velocity):</strong></h4>
@@ -242,25 +244,28 @@ v_y = v_{0y} - g t
 <p>[
 T = \frac{2 v_0 \sin\theta}{g}
 ]<br/>
-(derived from setting <span class="arithmatex">\( y = 0 \)</span> when the projectile lands)</p>
+(derived from setting $y = 0 ) when the projectile lands)</p>
 <h4 id="b-maximum-height-highest-point-reached-by-the-projectile"><strong>(b) Maximum Height</strong> (Highest point reached by the projectile)</h4>
 <p>[
 H = \frac{(v_0 \sin\theta)^2}{2g}
 ]<br/>
-(derived by setting <span class="arithmatex">\( v_y = 0 \)</span> at the peak)</p>
+(derived by setting $v_y = 0 ) at the peak)</p>
 <h4 id="c-range-total-horizontal-distance-covered"><strong>(c) Range</strong> (Total horizontal distance covered)</h4>
 <p>[
 R = \frac{v_0^2 \sin 2\theta}{g}
 ]<br/>
-(This is maximized when <span class="arithmatex">\( \theta = 45^\circ \)</span>)</p>
+(This is maximized when $\theta = 45^\circ $</p>
 <hr/>
 <h3 id="4-summary"><strong>4. Summary:</strong></h3>
 <ul>
-<li>The <strong>horizontal component</strong> remains constant (<span class="arithmatex">\( x = v_{0x} t \)</span>).</li>
-<li>The <strong>vertical component</strong> follows free-fall motion under gravity (<span class="arithmatex">\( y = v_{0y} t - \frac{1}{2} g t^2 \)</span>).</li>
+<li>The <strong>horizontal component</strong> remains constant ($x = v_{0x} t $.</li>
+<li>The <strong>vertical component</strong> follows free-fall motion under gravity <span class="arithmatex">\(y = v_{0y} t - \frac{1}{2} g t^2\)</span>.</li>
 <li>The <strong>time of flight, maximum height, and range</strong> depend on the initial velocity and angle of projection.</li>
 <li>The <strong>trajectory is a symmetric parabola</strong>.</li>
 </ul>
+<h2 id="projectile-motion-simulation">Projectile Motion Simulation</h2>
+<p>The following graph shows the trajectory of a projectile launched at different angles.</p>
+<p><img alt="Projectile Motion" src="projectile_motion.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
