@@ -6,7 +6,7 @@ Projectile motion describes the motion of an object launched into the air under 
 
 #### **1. Assumptions in Projectile Motion:**
 
-- The only force acting on the projectile (neglecting air resistance) is **gravity** (\( g = 9.81 \, m/s^2 \)).
+- The only force acting on the projectile (neglecting air resistance) is **gravity** $g = 9.81 \, m/s^2$.
 - The motion is **independent in horizontal and vertical directions**.
 - The horizontal motion has **constant velocity** (no acceleration).
 - The vertical motion has **uniform acceleration** due to gravity.
@@ -17,13 +17,13 @@ Projectile motion describes the motion of an object launched into the air under 
 
 Let:
 
-- \( v_0 \) = initial velocity  
-- \( \theta \) = launch angle  
-- \( v_{0x} = v_0 \cos\theta \) (initial horizontal velocity)  
-- \( v_{0y} = v_0 \sin\theta \) (initial vertical velocity)  
-- \( g = 9.81 \, m/s^2 \) (acceleration due to gravity)  
-- \( t \) = time  
-- \( x \) = horizontal displacement  
+- $v_0$ = initial velocity  
+- $\theta$ = launch angle  
+- $v_{0x} = v_0 \cos\theta \) (initial horizontal velocity)  
+- $v_{0y} = v_0 \sin\theta \) (initial vertical velocity)  
+- $g = 9.81 \, m/s^2 \) (acceleration due to gravity)  
+- $t \) = time  
+- $x \) = horizontal displacement  
 - $y$ = vertical displacement
 
 #### **Horizontal Motion (Constant Velocity):**  
@@ -52,25 +52,31 @@ v_y = v_{0y} - g t
 \[
 T = \frac{2 v_0 \sin\theta}{g}
 \]  
-(derived from setting \( y = 0 \) when the projectile lands)
+(derived from setting $y = 0 \) when the projectile lands)
 
 #### **(b) Maximum Height** (Highest point reached by the projectile)  
 \[
 H = \frac{(v_0 \sin\theta)^2}{2g}
 \]  
-(derived by setting \( v_y = 0 \) at the peak)
+(derived by setting $v_y = 0 \) at the peak)
 
 #### **(c) Range** (Total horizontal distance covered)  
 \[
 R = \frac{v_0^2 \sin 2\theta}{g}
 \]  
-(This is maximized when \( \theta = 45^\circ \))
+(This is maximized when $\theta = 45^\circ $
 
 ---
 
 ### **4. Summary:**
-- The **horizontal component** remains constant (\( x = v_{0x} t \)).
-- The **vertical component** follows free-fall motion under gravity (\( y = v_{0y} t - \frac{1}{2} g t^2 \)).
+- The **horizontal component** remains constant ($x = v_{0x} t $.
+- The **vertical component** follows free-fall motion under gravity $y = v_{0y} t - \frac{1}{2} g t^2$.
 - The **time of flight, maximum height, and range** depend on the initial velocity and angle of projection.
 - The **trajectory is a symmetric parabola**.
 
+
+## Projectile Motion Simulation
+
+The following graph shows the trajectory of a projectile launched at different angles.
+
+![Projectile Motion](projectile_motion.png)

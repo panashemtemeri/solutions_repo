@@ -45,3 +45,9 @@ Please visit the [Mathematics Physics Lectures](https://dchorazkiewicz.github.io
 * [Mathematics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Mathematics/Exercises/)
 * [Discret Mathematics](https://dchorazkiewicz.github.io/Mathematics_Physics_Lectures/Discrete_Mathematics/Exercises/)
 
+## Projectile Motion Simulation
+
+The following graph shows the trajectory of a projectile launched at different angles.
+
+![Projectile Motion](projectile_motion.png)
+
