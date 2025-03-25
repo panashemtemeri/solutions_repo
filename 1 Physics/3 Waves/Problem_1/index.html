@@ -54,11 +54,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal">2 Gravity</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_1/">Gravity - Orbital Period and Orbital Radius</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_2/">Problem 2: Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3</a>
+<li class="toctree-l2"><a class="reference internal" href="../../2%20Gravity/Problem_3/">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 </li>
 </ul>
 </li>
@@ -172,10 +172,99 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-on-a-water-surface">Interference Patterns on a Water Surface</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Interference occurs when waves from different sources overlap, creating new patterns. On a water surface, this phenomenon can be easily observed when ripples from different points meet, forming distinctive interference patterns. These patterns can show how waves combine in different ways, either reinforcing each other or canceling out.</p>
+<p>Studying these patterns helps us understand wave behavior in a simple, visual way. It also allows us to explore important concepts like the relationship between wave phase and the effects of multiple sources. This task offers a hands-on approach to learning about wave interactions and their real-world applications, making it an interesting and engaging way to dive into wave physics.</p>
+<h2 id="task">Task</h2>
+<p>A circular wave on the water surface, emanating from a point source located at position <span class="arithmatex">\(\mathbf{r_0}\)</span>, can be described by the Single Disturbance equation:</p>
+<div class="arithmatex">\[
+\psi(\mathbf{r}, t) = A \cos(k|\mathbf{r} - \mathbf{r_0}| - \omega t + \phi_0)
+\]</div>
+<p>where:
+- <span class="arithmatex">\(\psi(\mathbf{r}, t)\)</span> is the displacement of the water surface at point <span class="arithmatex">\(\mathbf{r}\)</span> and time <span class="arithmatex">\(t\)</span>,
+- <span class="arithmatex">\(A\)</span> is the amplitude of the wave,
+- <span class="arithmatex">\(k\)</span> is the wave number, related to the wavelength <span class="arithmatex">\(\lambda\)</span>,
+- <span class="arithmatex">\(\omega\)</span> is the angular frequency, related to the frequency <span class="arithmatex">\(f\)</span>,
+- <span class="arithmatex">\(|\mathbf{r} - \mathbf{r_0}|\)</span> is the distance from the source to the point <span class="arithmatex">\(\mathbf{r}\)</span>,
+- <span class="arithmatex">\(\phi_0\)</span> is the initial phase.</p>
+<p>Your task is to analyze the interference patterns formed on the water surface due to the superposition of waves emitted from point sources placed at the vertices of a chosen regular polygon.</p>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>Given a regular polygon with <span class="arithmatex">\(N\)</span> vertices, we will position point wave sources at each vertex of the polygon. The displacement at any point <span class="arithmatex">\(\mathbf{r}\)</span> on the water surface will be the result of the superposition of waves emitted from all the sources.</p>
+<h3 id="steps-to-follow">Steps to Follow</h3>
+<ol>
+<li>
+<p><strong>Select a Regular Polygon</strong>: Choose a regular polygon such as an equilateral triangle, square, or pentagon. The number of vertices <span class="arithmatex">\(N\)</span> will determine the number of wave sources.</p>
+</li>
+<li>
+<p><strong>Position the Sources</strong>: Place point wave sources at the vertices of the selected polygon. Each source will emit a circular wave.</p>
+</li>
+<li>
+<p><strong>Wave Equations</strong>: Write the equations describing the waves emitted from each source. For each source <span class="arithmatex">\(i\)</span>, the displacement <span class="arithmatex">\(\psi_i(\mathbf{r}, t)\)</span> will follow the form of the Single Disturbance equation, adjusted for the source's position <span class="arithmatex">\(\mathbf{r_i}\)</span>:
+   $$
+   \psi_i(\mathbf{r}, t) = A \cos(k|\mathbf{r} - \mathbf{r_i}| - \omega t + \phi_i)
+   $$
+   where <span class="arithmatex">\(\mathbf{r_i}\)</span> is the position of the <span class="arithmatex">\(i\)</span>-th source.</p>
+</li>
+<li>
+<p><strong>Superposition of Waves</strong>: Apply the principle of superposition by summing the wave displacements from all the sources:
+   $$
+   \psi(\mathbf{r}, t) = \sum_{i=1}^{N} \psi_i(\mathbf{r}, t)
+   $$</p>
+</li>
+<li>
+<p><strong>Analyze Interference Patterns</strong>: Examine the resulting displacement <span class="arithmatex">\(\psi(\mathbf{r}, t)\)</span> as a function of position <span class="arithmatex">\(\mathbf{r}\)</span> and time <span class="arithmatex">\(t\)</span>. Identify regions of constructive interference (wave amplification) and destructive interference (wave cancellation).</p>
+</li>
+<li>
+<p><strong>Visualization</strong>: Present your findings graphically, illustrating the interference patterns on the water surface. Use tools like Python (Matplotlib) to generate these visualizations.</p>
+</li>
+</ol>
+<h2 id="considerations">Considerations</h2>
+<ul>
+<li>Assume that all sources emit waves with the same amplitude <span class="arithmatex">\(A\)</span>, wavelength <span class="arithmatex">\(\lambda\)</span>, and frequency <span class="arithmatex">\(f\)</span>.</li>
+<li>The waves are coherent, meaning they maintain a constant phase difference.</li>
+<li>The phase differences and amplitudes of the waves will influence the resulting interference patterns.</li>
+<li>The simulation will allow us to observe how the interference pattern evolves over time and space.</li>
+</ul>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><strong>Markdown Document</strong>: A detailed explanation of the interference patterns observed for the chosen regular polygon.</li>
+<li><strong>Python Script or Notebook</strong>: Implementation of the simulations using Python and visualization libraries (e.g., Matplotlib).</li>
+<li><strong>Graphical Representations</strong>: Illustrations showing the water surface, highlighting regions of constructive and destructive interference.</li>
+</ul>
+<h2 id="example-regular-polygons">Example Regular Polygons</h2>
+<ol>
+<li><strong>Equilateral Triangle</strong>:</li>
+<li>3 vertices placed at equal distances.</li>
+<li>
+<p>Waves from each source interfere to create a unique pattern with threefold symmetry.</p>
+</li>
+<li>
+<p><strong>Square</strong>:</p>
+</li>
+<li>4 vertices placed at equal distances.</li>
+<li>
+<p>Results in a different interference pattern with fourfold symmetry.</p>
+</li>
+<li>
+<p><strong>Pentagon</strong>:</p>
+</li>
+<li>5 vertices placed at equal distances.</li>
+<li>Creates a distinct interference pattern with fivefold symmetry.</li>
+</ol>
+<h2 id="applications-and-real-world-relevance">Applications and Real-World Relevance</h2>
+<ul>
+<li>Understanding wave interference is fundamental in many fields of physics and engineering, especially in acoustics, optics, and signal processing.</li>
+<li>The superposition principle is used in various practical applications, such as designing loudspeakers, antennas, and understanding diffraction patterns in physics.</li>
+<li>This task is a practical way to observe and visualize wave interactions in a controlled, easy-to-understand scenario, bridging theory and real-world applications in physics.</li>
+</ul>
+<p><img alt="Alt text" src="../image.png"/></p>
+<p><img alt="Alt text" src="../image-1.png"/></p>
+<p><img alt="Alt text" src="../image-2.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../2%20Gravity/Problem_3/" title="Problem 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../../2%20Gravity/Problem_3/" title="Problem 3: Trajectories of a Freely Released Payload Near Earth"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../4%20Electromagnetism/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>

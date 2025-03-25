@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 3 - Physics and Mathematics</title>
+<title>Problem 3: Trajectories of a Freely Released Payload Near Earth - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 3";
+        var mkdocs_page_name = "Problem 3: Trajectories of a Freely Released Payload Near Earth";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_3.md";
         var mkdocs_page_url = null;
       </script>
@@ -54,12 +54,20 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Gravity - Orbital Period and Orbital Radius</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2: Escape Velocities and Cosmic Velocities</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-mathematical-formulation">1. Mathematical Formulation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-initial-conditions-and-numerical-method">2. Initial Conditions and Numerical Method</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#example-simulation">Example Simulation</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +171,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 3</li>
+<li class="breadcrumb-item active">Problem 3: Trajectories of a Freely Released Payload Near Earth</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,11 +179,84 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-3">Problem 3</h1>
+<h1 id="problem-3-trajectories-of-a-freely-released-payload-near-earth">Problem 3: Trajectories of a Freely Released Payload Near Earth</h1>
+<p>We can simulate the motion of a payload released near Earth using gravitational principles and numerical methods. We'll implement a Python script to calculate and visualize the trajectory of the payload under Earth's gravity, accounting for initial conditions such as position, velocity, and altitude. This will allow us to examine the possible paths of the payload (e.g., parabolic, hyperbolic, elliptical) and relate the results to real-world space missions.</p>
+<h2 id="1-mathematical-formulation">1. Mathematical Formulation</h2>
+<p>The gravitational force on an object near Earth is given by Newton's Law of Gravitation:</p>
+<div class="arithmatex">\[
+F = \frac{GMm}{r^2}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(F\)</span> is the gravitational force,</li>
+<li><span class="arithmatex">\(G\)</span> is the gravitational constant (<span class="arithmatex">\(6.674 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2}\)</span>),</li>
+<li><span class="arithmatex">\(M\)</span> is the mass of Earth (<span class="arithmatex">\(5.972 \times 10^{24} \, \text{kg}\)</span>),</li>
+<li><span class="arithmatex">\(m\)</span> is the mass of the payload,</li>
+<li><span class="arithmatex">\(r\)</span> is the distance between the object and the center of Earth.</li>
+</ul>
+<p>The motion of the payload can be modeled by solving Newton's second law:</p>
+<div class="arithmatex">\[
+F = ma
+\]</div>
+<p>The equations of motion can be solved using numerical methods (e.g., Euler's method or Runge-Kutta method) to simulate the trajectory.</p>
+<h2 id="2-initial-conditions-and-numerical-method">2. Initial Conditions and Numerical Method</h2>
+<p>The initial conditions for the payload include:</p>
+<ul>
+<li>Initial position (in meters, relative to Earth's center),</li>
+<li>Initial velocity (in meters per second),</li>
+<li>Initial altitude (the height above Earth's surface).</li>
+</ul>
+<p>Using numerical methods like Runge-Kutta, we can compute the trajectory over time.</p>
+<h3 id="example-simulation">Example Simulation</h3>
+<p><img alt="Alt text" src="../image-8.png"/></p>
+<h1 id="explanation">Explanation:</h1>
+<h2 id="initial-conditions">Initial Conditions:</h2>
+<ul>
+<li>We set the initial altitude as 500 km above Earth's surface.</li>
+<li>The initial velocity is set tangentially (10,000 m/s).</li>
+</ul>
+<h2 id="equations-of-motion">Equations of Motion:</h2>
+<p>We use polar coordinates for the trajectory:
+- $ r $ (radial distance),
+- $ \theta $ (angle),
+- $ v_r $ (radial velocity), and
+- $ v_\theta $ (tangential velocity).</p>
+<h2 id="numerical-integration">Numerical Integration:</h2>
+<p>We solve the system of differential equations using <code>scipy.integrate.solve_ivp</code>.</p>
+<h2 id="plotting">Plotting:</h2>
+<ul>
+<li>The trajectory is plotted in Cartesian coordinates (x, y) after converting from polar coordinates.</li>
+<li>The Earth’s position is marked as a red point at the origin.</li>
+</ul>
+<h2 id="saving-the-plot">Saving the Plot:</h2>
+<ul>
+<li>The plot is saved as <code>payload_trajectory.png</code>.</li>
+</ul>
+<h2 id="4-discussion-of-trajectories">4. Discussion of Trajectories</h2>
+<ul>
+<li>The trajectory can be parabolic, elliptical, or hyperbolic based on the initial velocity.</li>
+<li>If the velocity is below escape velocity, the trajectory will be elliptical (bounded orbit).</li>
+<li>If the velocity is exactly equal to escape velocity, the trajectory will be parabolic.</li>
+<li>If the velocity exceeds escape velocity, the trajectory will be hyperbolic (unbounded).</li>
+<li>The above simulation assumes the payload has tangential velocity, which might lead to an elliptical or parabolic orbit depending on the speed.</li>
+</ul>
+<h2 id="5-real-world-applications">5. Real-World Applications</h2>
+<ul>
+<li><strong>Orbital Insertion</strong>: This simulation can help plan trajectories for placing payloads into orbit.</li>
+<li><strong>Reentry</strong>: Simulating the trajectory after the payload is released from a spacecraft can help design reentry trajectories.</li>
+<li><strong>Escape</strong>: The concept of escape velocity helps plan interplanetary or interstellar missions.</li>
+</ul>
+<h2 id="deliverables">Deliverables:</h2>
+<ul>
+<li><strong>Markdown Document</strong>: A detailed explanation of the problem, Python code, and results.</li>
+<li><strong>Python Script</strong>: The script above that simulates the payload's trajectory and visualizes it.</li>
+<li><strong>Graphical Representations</strong>: The <code>payload_trajectory.png</code> image shows the trajectory of the payload.</li>
+<li><strong>Discussion</strong>: Insights into orbital mechanics and real-world applications such as satellite deployment and mission planning.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../Problem_2/" title="Problem 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../Problem_2/" title="Problem 2: Escape Velocities and Cosmic Velocities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../3%20Waves/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>

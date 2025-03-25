@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 2 - Physics and Mathematics</title>
+<title>Problem 2: Escape Velocities and Cosmic Velocities - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 2";
+        var mkdocs_page_name = "Problem 2: Escape Velocities and Cosmic Velocities";
         var mkdocs_page_input_path = "1 Physics/2 Gravity/Problem_2.md";
         var mkdocs_page_url = null;
       </script>
@@ -54,13 +54,25 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">2 Gravity</a>
 <ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_1/">Gravity - Orbital Period and Orbital Radius</a>
 </li>
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2: Escape Velocities and Cosmic Velocities</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-overview">Task Overview</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-first-second-and-third-cosmic-velocities">1. First, Second, and Third Cosmic Velocities</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-mathematical-derivations-and-parameters">2. Mathematical Derivations and Parameters</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-simulations-and-visualizations-for-different-celestial-bodies">3. Simulations and Visualizations for Different Celestial Bodies</a>
+</li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3</a>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_3/">Problem 3: Trajectories of a Freely Released Payload Near Earth</a>
 </li>
 </ul>
 </li>
@@ -163,7 +175,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">2 Gravity</li>
-<li class="breadcrumb-item active">Problem 2</li>
+<li class="breadcrumb-item active">Problem 2: Escape Velocities and Cosmic Velocities</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,12 +183,70 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h1 id="problem-2-escape-velocities-and-cosmic-velocities">Problem 2: Escape Velocities and Cosmic Velocities</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The concept of escape velocity is fundamental in understanding the energy needed to overcome a celestial body's gravitational pull. This is crucial for space missions, launching satellites, and even exploring interplanetary and interstellar travel. The cosmic velocities are thresholds defining the velocities needed to achieve specific missions: the first cosmic velocity (orbital velocity), second cosmic velocity (escape velocity), and third cosmic velocity (escape from the star system).</p>
+<p>By calculating and visualizing these velocities for various celestial bodies, we gain insights into the conditions needed for space exploration.</p>
+<h2 id="task-overview">Task Overview</h2>
+<ol>
+<li>Define the first, second, and third cosmic velocities and explain their physical meaning.</li>
+<li>Analyze the mathematical derivations and parameters that affect these velocities.</li>
+<li>Calculate and visualize these velocities for different celestial bodies like Earth, Mars, and Jupiter.</li>
+<li>Discuss the importance of these velocities in space exploration and how they apply to satellite launches, interplanetary missions, and potential interstellar travel.</li>
+</ol>
+<h3 id="1-first-second-and-third-cosmic-velocities">1. First, Second, and Third Cosmic Velocities</h3>
+<h4 id="11-first-cosmic-velocity-orbital-velocity">1.1 First Cosmic Velocity (Orbital Velocity)</h4>
+<p>This is the velocity required for an object to remain in a circular orbit around a celestial body, such as Earth. It is the minimum velocity needed to stay in orbit without falling back to the planet.</p>
+<p>The formula for orbital velocity <span class="arithmatex">\(v_1\)</span> is:</p>
+<div class="arithmatex">\[
+v_1 = \sqrt{\frac{GM}{R}}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(G\)</span> is the gravitational constant (<span class="arithmatex">\(6.674 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2}\)</span>),</li>
+<li><span class="arithmatex">\(M\)</span> is the mass of the celestial body,</li>
+<li><span class="arithmatex">\(R\)</span> is the radius from the center of the body to the orbiting object.</li>
+</ul>
+<h4 id="12-second-cosmic-velocity-escape-velocity">1.2 Second Cosmic Velocity (Escape Velocity)</h4>
+<p>This is the minimum velocity required for an object to escape the gravitational influence of a celestial body, without needing any further propulsion.</p>
+<p>The formula for escape velocity <span class="arithmatex">\(v_2\)</span> is:</p>
+<div class="arithmatex">\[
+v_2 = \sqrt{\frac{2GM}{R}}
+\]</div>
+<p>Where the variables have the same meaning as above. Escape velocity is always higher than the orbital velocity because it accounts for the additional energy needed to break free from the gravitational pull.</p>
+<h4 id="13-third-cosmic-velocity-solar-escape-velocity">1.3 Third Cosmic Velocity (Solar Escape Velocity)</h4>
+<p>This is the velocity required for an object to escape the gravitational influence of the entire solar system, i.e., to leave the Sun’s gravity.</p>
+<p>The formula for the third cosmic velocity <span class="arithmatex">\(v_3\)</span> is:</p>
+<div class="arithmatex">\[
+v_3 = \sqrt{\frac{2GM_{\text{sun}}}{R_{\text{sun}}}} + v_2
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(M_{\text{sun}}\)</span> is the mass of the Sun,</li>
+<li><span class="arithmatex">\(R_{\text{sun}}\)</span> is the radius from the Earth to the Sun,</li>
+<li><span class="arithmatex">\(v_2\)</span> is the escape velocity from Earth (or the body in question).</li>
+</ul>
+<p>This formula provides the velocity needed to escape Earth's gravity and then continue towards escaping the Sun's gravitational influence.</p>
+<h3 id="2-mathematical-derivations-and-parameters">2. Mathematical Derivations and Parameters</h3>
+<p>To calculate these velocities, the primary parameters are:</p>
+<ul>
+<li>Gravitational constant <span class="arithmatex">\(G\)</span>,</li>
+<li>Mass of the celestial body <span class="arithmatex">\(M\)</span>,</li>
+<li>Radius from the center of the celestial body <span class="arithmatex">\(R\)</span>,</li>
+<li>Mass of the Sun for the third cosmic velocity.</li>
+</ul>
+<h3 id="3-simulations-and-visualizations-for-different-celestial-bodies">3. Simulations and Visualizations for Different Celestial Bodies</h3>
+<p>We can use Python to simulate and visualize the escape velocities and cosmic velocities for Earth, Mars, and Jupiter. Below is a Python script to calculate and visualize the velocities for these planets.</p>
+<p><img alt="Alt text" src="../image-3.png"/></p>
+<p><img alt="Alt text" src="../image-4.png"/></p>
+<p><img alt="Alt text" src="../image-5.png"/></p>
+<p><img alt="Alt text" src="../image-6.png"/></p>
+<p><img alt="Alt text" src="../image-7.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../Problem_1/" title="Problem 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../Problem_3/" title="Problem 3">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-left" href="../Problem_1/" title="Gravity - Orbital Period and Orbital Radius"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../Problem_3/" title="Problem 3: Trajectories of a Freely Released Payload Near Earth">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
