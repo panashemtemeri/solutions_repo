@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Circuits - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Circuits";
         var mkdocs_page_input_path = "1 Physics/5 Circuits/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -70,14 +70,30 @@
 </li>
 <li class="toctree-l1"><a class="reference internal">4 Electromagnetism</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../4%20Electromagnetism/Problem_1/">Electromagnetism</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">5 Circuits</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Circuits</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#task-options">Task Options</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#option-1-simplified-task-algorithm-description">OPTION 1: SIMPLIFIED TASK – ALGORITHM DESCRIPTION</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#option-2-advanced-task-full-implementation">OPTION 2: ADVANCED TASK – FULL IMPLEMENTATION</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#deliverables">Deliverables</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hints-and-resources">Hints and Resources</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +179,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">5 Circuits</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Circuits</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,11 +187,57 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="circuits">Circuits</h1>
+<h2 id="equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</h2>
+<h2 id="motivation">Motivation</h2>
+<p>Calculating equivalent resistance is a fundamental problem in electrical circuits, essential for understanding and designing efficient systems. While traditional methods involve iteratively applying series and parallel resistor rules, these approaches can become cumbersome for complex circuits with many components. Graph theory offers a powerful alternative, providing a structured and algorithmic way to analyze circuits.</p>
+<p>By representing a circuit as a graph—where nodes correspond to junctions and edges represent resistors with weights equal to their resistance values—we can systematically simplify even the most intricate networks. This method not only streamlines calculations but also opens the door to automated analysis, making it particularly useful in modern applications like circuit simulation software, optimization problems, and network design.</p>
+<p>Studying equivalent resistance through graph theory is valuable not only for its practical applications but also for the deeper insights it provides into the interplay between electrical and mathematical concepts. This approach highlights the versatility of graph theory, demonstrating its relevance across physics, engineering, and computer science.</p>
+<hr/>
+<h2 id="task-options">Task Options</h2>
+<h3 id="option-1-simplified-task-algorithm-description">OPTION 1: SIMPLIFIED TASK – ALGORITHM DESCRIPTION</h3>
+<p>Describe the algorithm for calculating the equivalent resistance using graph theory.</p>
+<p>Provide the pseudocode that:
+- Identifies series and parallel connections.
+- Iteratively reduces the graph until a single equivalent resistance is obtained.
+- Includes a clear explanation of how the algorithm handles nested combinations.</p>
+<h3 id="option-2-advanced-task-full-implementation">OPTION 2: ADVANCED TASK – FULL IMPLEMENTATION</h3>
+<p>Implement the algorithm in a programming language of your choice.</p>
+<p>Ensure the implementation:
+- Accepts a circuit graph as input.
+- Handles arbitrary resistor configurations, including nested series and parallel connections.
+- Outputs the final equivalent resistance.</p>
+<p>Test your implementation with examples, such as:
+- Simple series and parallel combinations.
+- Nested configurations.
+- Complex graphs with multiple cycles.</p>
+<hr/>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li>A detailed pseudocode (but preferably a full implementation) and explanation of the algorithm.</li>
+<li>Description of how it handles complex circuit configurations on three input examples.</li>
+<li>A brief analysis of the algorithm's efficiency and potential improvements.</li>
+</ul>
+<hr/>
+<h2 id="hints-and-resources">Hints and Resources</h2>
+<ul>
+<li><strong>Focus on iterative graph simplification:</strong></li>
+<li>Detect linear chains for series reduction.</li>
+<li>Identify cycles for parallel reduction.</li>
+<li><strong>Use tools like</strong> <code>networkx</code> <strong>(Python) or similar for graph manipulation if you choose implementation.</strong></li>
+<li><strong>Depth-first search (DFS) or other traversal methods</strong> can help identify patterns in the graph.</li>
+</ul>
+<p>Choose the task that matches your skill level while providing a clear and structured solution to the problem.</p>
+<h1 id="example-1-simple-series-circuit">Example 1: Simple Series Circuit</h1>
+<p><img alt="Alt text" src="../image.png"/></p>
+<h1 id="example-2-simple-parallel-circuit">Example 2: Simple Parallel Circuit</h1>
+<p><img alt="Alt text" src="../image-1.png"/></p>
+<h1 id="example-3-complex-circuit">Example 3: Complex Circuit</h1>
+<p><img alt="Alt text" src="../image-2.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../4%20Electromagnetism/Problem_1/" title="Problem 1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../../4%20Electromagnetism/Problem_1/" title="Electromagnetism"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../6%20Statistics/Problem_1/" title="Problem 1">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
