@@ -54,7 +54,6 @@ The planets in the Solar System (e.g., Earth, Mars, Jupiter) all follow Keplerâ€
 
 ![Alt text](image.png)
 
-![Alt text](image-1.png)
 
 ![Alt text](image-2.png)
 

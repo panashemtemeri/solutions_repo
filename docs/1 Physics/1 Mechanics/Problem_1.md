@@ -33,7 +33,7 @@ $$
 $$
 v_x = v_0 \cos\theta
 $$  
-\(\Rightarrow\) No acceleration in the horizontal direction.
+$\Rightarrow$ No acceleration in the horizontal direction.
 
 #### **Vertical Motion (Accelerated Motion due to Gravity):**  
 $$
@@ -42,7 +42,7 @@ $$
 $$
 v_y = v_{0y} - g t
 $$  
-\(\Rightarrow\) Velocity decreases until the projectile reaches the highest point, then increases downward.
+$\Rightarrow$ Velocity decreases until the projectile reaches the highest point, then increases downward.
 
 ---
 
@@ -64,7 +64,7 @@ $$
 $$
 R = \frac{v_0^2 \sin 2\theta}{g}
 $$  
-(This is maximized when $\theta = 45^\circ $
+$ This is maximized when $$ \theta = 45^\circ $
 
 ---
 
