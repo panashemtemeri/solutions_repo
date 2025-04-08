@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Statistics - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Statistics";
         var mkdocs_page_input_path = "1 Physics/6 Statistics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -82,17 +82,25 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">6 Statistics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Statistics</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#exploring-the-central-limit-theorem-through-simulations">Exploring the Central Limit Theorem through Simulations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-simulating-sampling-distributions">1. Simulating Sampling Distributions:</a>
+</li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
+<li class="toctree-l3"><a class="reference internal" href="#population-distributions">Population distributions</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Estimating Pi using Monte Carlo Methods</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal">7 Measurements</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../7%20Measurements/Problem_1/">Measurements</a>
 </li>
 </ul>
 </li>
@@ -163,7 +171,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">6 Statistics</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Statistics</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,12 +179,61 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="statistics">Statistics</h1>
+<h2 id="exploring-the-central-limit-theorem-through-simulations">Exploring the Central Limit Theorem through Simulations</h2>
+<p><strong>Motivation:</strong></p>
+<p>The Central Limit Theorem (CLT) is a cornerstone of probability and statistics, stating that the sampling distribution of the sample mean approaches a normal distribution as the sample size increases, regardless of the population's original distribution. Simulations provide an intuitive and hands-on way to observe this phenomenon in action.</p>
+<p><strong>Task:</strong></p>
+<h3 id="1-simulating-sampling-distributions">1. Simulating Sampling Distributions:</h3>
+<p>Select several types of population distributions, such as:</p>
+<ul>
+<li><strong>Uniform Distribution:</strong> All values within a given range are equally likely.</li>
+<li><strong>Exponential Distribution:</strong> Describes the time between events in a Poisson process (events occurring continuously and independently at a constant average rate).</li>
+<li><strong>Binomial Distribution:</strong> Represents the number of successes in a fixed number of independent Bernoulli trials (each trial has only two possible outcomes: success or failure).</li>
+</ul>
+<p>For each distribution, generate a large dataset representing the population.</p>
+<p><strong>Examples:</strong></p>
+<h2 id="population-distributions">Population distributions</h2>
+<p><img alt="Alt text" src="../image.png"/></p>
+<ol>
+<li>Sampling and Visualization:</li>
+</ol>
+<p>Randomly sample data from the population and calculate the sample mean for different sample sizes (e.g., 5, 10, 30, 50). Repeat the process multiple times to create a sampling distribution of the sample mean. Plot histograms of the sample means for each sample size and observe the convergence to a normal distribution.</p>
+<p>Formulas:</p>
+<p>Sample Mean (<span class="arithmatex">\(\bar{x}\)</span>): <span class="arithmatex">\(<span class="arithmatex">\(\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}\)</span>\)</span> where <span class="arithmatex">\(x_i\)</span> are the individual data points in the sample and <span class="arithmatex">\(n\)</span> is the sample size.</p>
+<p>Examples:</p>
+<p><img alt="Alt text" src="../image-1.png"/></p>
+<ol>
+<li>Parameter Exploration:</li>
+</ol>
+<p>Investigate how the shape of the original distribution and the sample size influence the rate of convergence to normality. Highlight the impact of the population's variance on the spread of the sampling distribution.</p>
+<p>Observations:</p>
+<p>Shape of Original Distribution: Distributions closer to normal tend to have sampling distributions of the mean converge to normality faster with smaller sample sizes. Highly skewed distributions (like the exponential) may require larger sample sizes for the sampling distribution of the mean to appear approximately normal.
+Sample Size: As the sample size increases, the sampling distribution of the mean becomes more and more bell-shaped (normal), regardless of the original population distribution. The spread of the sampling distribution also decreases with increasing sample size.
+Population Variance (<span class="arithmatex">\(\sigma^2\)</span>): The variance of the sampling distribution of the mean (<span class="arithmatex">\(\sigma_{\bar{x}}^2\)</span>) is related to the population variance by the formula: <span class="arithmatex">\(<span class="arithmatex">\(\sigma_{\bar{x}}^2 = \frac{\sigma^2}{n}\)</span>\)</span> where <span class="arithmatex">\(n\)</span> is the sample size. This means that a population with a larger variance will result in a sampling distribution of the mean with a larger spread (for a given sample size). Conversely, a smaller population variance leads to a narrower sampling distribution of the mean.
+Formula:</p>
+<p>Standard Deviation of the Sample Mean (Standard Error, <span class="arithmatex">\(\sigma_{\bar{x}}\)</span>): <span class="arithmatex">\(<span class="arithmatex">\(\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}\)</span>\)</span>
+4. Practical Applications:</p>
+<p>Reflect on the importance of the CLT in real-world scenarios, such as:</p>
+<p>Estimating Population Parameters: The CLT allows us to make inferences about population means based on sample means. We can construct confidence intervals and perform hypothesis tests relying on the approximate normality of the sampling distribution of the mean, even if we don't know the population's distribution.
+Quality Control in Manufacturing: In manufacturing, samples are often taken from production lines to monitor the quality of products. The CLT enables us to establish control limits for sample means, helping to identify when the process might be deviating from its desired state.
+Predicting Outcomes in Financial Models: Many financial models rely on the assumption of normality (or transformations to achieve it). While real-world financial data may not always be perfectly normal, the CLT provides a foundation for using statistical methods based on normal distributions when dealing with averages of financial variables.
+Deliverables:</p>
+<p>A Markdown document (this document) explaining the simulation and its results.
+Python scripts or notebooks implementing the simulations for various population distributions (as shown in the examples).
+Plots illustrating the sampling distributions and their progression toward normality (generated by the Python scripts).
+A discussion on the implications of the results and their connection to theoretical expectations (covered in the "Observations" and "Practical Applications" sections).
+Hints and Resources:</p>
+<p>Use Python libraries such as NumPy for random number generation (np.random.uniform, np.random.exponential, np.random.binomial) and Matplotlib/Seaborn for visualization (plt, sns).
+Begin with simple populations (e.g., uniform or normal - although a normal population will trivially show a normal sampling distribution) before exploring more complex distributions like exponential or chi-squared.
+Ensure you understand how to calculate and interpret the sample mean (np.mean()) and variance (np.var()).</p>
+<p>Conclusion</p>
+<p>This task encourages you to explore the Central Limit Theorem through computational experiments, deepening your understanding of its significance in statistics. By visualizing the convergence of sample means to a normal distribution from various original distributions, you gain a practical appreciation for this fundamental theorem.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
 <a class="btn btn-neutral float-left" href="../../5%20Circuits/Problem_1/" title="Circuits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../Problem_2/" title="Problem 2">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-right" href="../Problem_2/" title="Estimating Pi using Monte Carlo Methods">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">

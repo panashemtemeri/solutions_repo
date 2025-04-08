@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Measurements - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Measurements";
         var mkdocs_page_input_path = "1 Physics/7 Measurements/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -82,16 +82,24 @@
 </li>
 <li class="toctree-l1"><a class="reference internal">6 Statistics</a>
 <ul>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Problem 1</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_1/">Statistics</a>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Problem 2</a>
+<li class="toctree-l2"><a class="reference internal" href="../../6%20Statistics/Problem_2/">Estimating Pi using Monte Carlo Methods</a>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">7 Measurements</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Measurements</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#problem-1-measuring-earths-gravitational-acceleration-with-a-pendulum">Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-materials">1. Materials:</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-setup">2. Setup:</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +171,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">7 Measurements</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Measurements</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,11 +179,226 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="measurements">Measurements</h1>
+<h2 id="problem-1-measuring-earths-gravitational-acceleration-with-a-pendulum">Problem 1: Measuring Earth's Gravitational Acceleration with a Pendulum</h2>
+<p><strong>Motivation:</strong></p>
+<p>The acceleration (<span class="arithmatex">\(g\)</span>) due to gravity is a fundamental constant that influences a wide range of physical phenomena. Measuring <span class="arithmatex">\(g\)</span> accurately is crucial for understanding gravitational interactions, designing structures, and conducting experiments in various fields. One classic method for determining <span class="arithmatex">\(g\)</span> is through the oscillations of a simple pendulum, where the period of oscillation depends on the local gravitational field.</p>
+<p><strong>Task:</strong></p>
+<p>Measure the acceleration <span class="arithmatex">\(g\)</span> due to gravity using a pendulum and in detail analyze the uncertainties in the measurements. This exercise emphasizes rigorous measurement practices, uncertainty analysis, and their role in experimental physics.</p>
+<p><strong>Procedure:</strong></p>
+<h3 id="1-materials">1. Materials:</h3>
+<ul>
+<li>A string (1 or 1.5 meters long).</li>
+<li>A small weight (e.g., bag of coins, bag of sugar, key chain) mounted on the string.</li>
+<li>Stopwatch (or smartphone timer) with a precision of at least 0.01 seconds.</li>
+<li>Ruler or measuring tape with a resolution of 1 millimeter (0.001 meters).</li>
+</ul>
+<h3 id="2-setup">2. Setup:</h3>
+<ol>
+<li>Attach the weight securely to one end of the string.</li>
+<li>Fix the other end of the string to a sturdy support, ensuring the pendulum can swing freely.</li>
+<li>Measure the length of the pendulum (<span class="arithmatex">\(L\)</span>) from the suspension point to the center of the weight using the ruler or measuring tape.</li>
+<li><strong>Record the length <span class="arithmatex">\(L\)</span> and the resolution of the measuring tool (<span class="arithmatex">\(\Delta L_{res} = 0.001\)</span> m).</strong></li>
+<li><strong>Calculate the uncertainty in the length measurement (<span class="arithmatex">\(\delta L\)</span>) as half the resolution:</strong>
+<span class="arithmatex">\(<span class="arithmatex">\(\delta L = \frac{\Delta L_{res}}{2} = \frac{0.001 \text{ m}}{2} = 0.0005 \text{ m}\)</span>\)</span></li>
+</ol>
+<p><strong>Example (Recording Length):</strong></p>
+<p><img alt="Alt text" src="../image.png"/></p>
+<ol>
+<li>Data Collection:</li>
+</ol>
+<p>Displace the pendulum slightly (less than 15 degrees from the vertical) and release it gently to ensure smooth oscillations.
+Measure the time for 10 full oscillations (<span class="arithmatex">\(t_{10}\)</span>). A "full oscillation" is one complete back-and-forth swing.
+Repeat this measurement 10 times.
+Record all 10 measurements of <span class="arithmatex">\(t_{10}\)</span>.</p>
+<p>Example (Simulating Time Measurements):</p>
+<p><img alt="Alt text" src="../image-1.png"/></p>
+<p>Calculations:</p>
+<ol>
+<li>Calculate the period:</li>
+</ol>
+<p>The period of one oscillation (<span class="arithmatex">\(T\)</span>) is the mean time for 10 oscillations divided by 10:</p>
+<div class="arithmatex">\[T = \frac{\langle t_{10} \rangle}{10}\]</div>
+<p>The uncertainty in the period (<span class="arithmatex">\(\delta T\)</span>) is the uncertainty in the mean time for 10 oscillations divided by 10:</p>
+<div class="arithmatex">\[\delta T = \frac{\delta \langle t_{10} \rangle}{10}\]</div>
+<p>Example (Calculating Period and its Uncertainty):</p>
+<p><img alt="Alt text" src="../image-2.png"/></p>
+<ol>
+<li>Determine <span class="arithmatex">\(g\)</span>:</li>
+</ol>
+<p>The period of a simple pendulum is given by the formula:</p>
+<div class="arithmatex">\[T = 2\pi \sqrt{\frac{L}{g}}\]</div>
+<p>Solving for <span class="arithmatex">\(g\)</span>, we get:</p>
+<div class="arithmatex">\[g = \frac{4\pi^2 L}{T^2}\]</div>
+<p>Example (Calculating g):</p>
+<p><img alt="Alt text" src="../image-3.png"/></p>
+<ol>
+<li>Propagate uncertainties:</li>
+</ol>
+<p>To find the uncertainty in <span class="arithmatex">\(g\)</span> (<span class="arithmatex">\(\delta g\)</span>), we need to propagate the uncertainties in <span class="arithmatex">\(L\)</span> (<span class="arithmatex">\(\delta L\)</span>) and <span class="arithmatex">\(T\)</span> (<span class="arithmatex">\(\delta T\)</span>). Using the formula for <span class="arithmatex">\(g\)</span>, we can use the following approximation for the relative uncertainty:</p>
+<div class="arithmatex">\[\frac{\delta g}{g} = \sqrt{\left(\frac{\delta L}{L}\right)^2 + \left(2 \frac{\delta T}{T}\right)^2}\]</div>
+<p>Therefore, the absolute uncertainty in <span class="arithmatex">\(g\)</span> is:</p>
+<div class="arithmatex">\[\delta g = g \times \sqrt{\left(\frac{\delta L}{L}\right)^2 + \left(2 \frac{\delta T}{T}\right)^2}\]</div>
+<p>Example (Propagating Uncertainties):</p>
+<p><img alt="Alt text" src="../image-4.png"/></p>
+<p>Analysis:</p>
+<ol>
+<li>Compare your measured <span class="arithmatex">\(g\)</span> with the standard value (<span class="arithmatex">\(9.81 , \text{m/s}^2\)</span>).</li>
+</ol>
+<p>Calculate the percentage difference between your measured value and the standard value:</p>
+<div class="arithmatex">\[\text{Percentage Difference} = \left| \frac{g_{measured} - g_{standard}}{g_{standard}} \right| \times 100%\]</div>
+<p>Consider if your measured value, within its uncertainty (<span class="arithmatex">\(\pm \delta g\)</span>), overlaps with the standard value.</p>
+<ol>
+<li>Discuss:</li>
+</ol>
+<p>The effect of measurement resolution on <span class="arithmatex">\(g\)</span>: How did the resolution of your ruler and stopwatch limit the precision of your measurements of <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(t_{10}\)</span>, and consequently, the uncertainty in your calculated <span class="arithmatex">\(g\)</span>? A lower resolution would lead to larger initial uncertainties (<span class="arithmatex">\(\delta L\)</span> and the resolution of the stopwatch), which would propagate to a larger <span class="arithmatex">\(\delta g\)</span>.
+Variability in timing and its impact on <span class="arithmatex">\(g\)</span>: What were the sources of variability in your timing measurements? Human reaction time, slight variations in the release of the pendulum, and air resistance could contribute to the spread in your <span class="arithmatex">\(t_{10}\)</span> measurements, reflected in the standard deviation and <span class="arithmatex">\(\delta \langle t_{10} \rangle\)</span>, ultimately affecting <span class="arithmatex">\(\delta g\)</span>. Taking more measurements can help reduce the uncertainty due to random timing variations.
+Any assumptions or experimental limitations: What assumptions did you make during the experiment? For example, the assumption of a simple pendulum (massless string, point mass), small angle oscillations (<span class="arithmatex">\(\theta &lt; 15^\circ\)</span>), and negligible air resistance. How might these assumptions have affected your results? Deviations from these ideal conditions would introduce systematic errors that are not accounted for in the uncertainty propagation based on measurement precision alone. For instance, a heavier string or larger oscillations would affect the period.</p>
+<p>Deliverables (Tabulated format):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Value (with uncertainty)</th>
+<th style="text-align: left;">Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pendulum Length</td>
+<td style="text-align: left;"><span class="arithmatex">\(L\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(1.255 \pm 0.0005\)</span></td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resolution of Length Tool</td>
+<td style="text-align: left;"><span class="arithmatex">\(\Delta L_{res}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.001\)</span></td>
+<td style="text-align: left;">m</td>
+</tr>
+<tr>
+<td style="text-align: left;">Number of Oscillations</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 1</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 1}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.15\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 2</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 2}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.22\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 3</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 3}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.08\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 4</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 4}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.18\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 5</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 5}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.25\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 6</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 6}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.11\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 7</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 7}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.20\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 8</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 8}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.16\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 9</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 9}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.23\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Time for 10 Oscillations 10</td>
+<td style="text-align: left;"><span class="arithmatex">\(t_{10, 10}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.19\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean Time for 10 Osc.</td>
+<td style="text-align: left;"><span class="arithmatex">\(\langle t_{10} \rangle\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(20.18 \pm 0.02\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Standard Deviation of Time</td>
+<td style="text-align: left;"><span class="arithmatex">\(\sigma\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.05\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Uncertainty in Mean Time</td>
+<td style="text-align: left;"><span class="arithmatex">\(\delta \langle t_{10} \rangle\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.02\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Period</td>
+<td style="text-align: left;"><span class="arithmatex">\(T\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(2.018 \pm 0.002\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Uncertainty in Period</td>
+<td style="text-align: left;"><span class="arithmatex">\(\delta T\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.002\)</span></td>
+<td style="text-align: left;">s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Calculated <span class="arithmatex">\(g\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(g\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(9.74 \pm 0.04\)</span></td>
+<td style="text-align: left;">m/s²</td>
+</tr>
+<tr>
+<td style="text-align: left;">Uncertainty in <span class="arithmatex">\(g\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\delta g\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.04\)</span></td>
+<td style="text-align: left;">m/s²</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>The discussion on sources of uncertainty and their impact on the results.</li>
+</ol>
+<p>(Your detailed discussion here, addressing the points raised in the "Analysis" section.)</p>
+<p>For example:</p>
+<p>"The resolution of the meter stick used to measure the pendulum length was 1 millimeter, resulting in an initial uncertainty of <span class="arithmatex">\(\pm 0.5\)</span> millimeters (<span class="arithmatex">\(\pm 0.0005\)</span> m) in <span class="arithmatex">\(L\)</span>. This uncertainty propagates to the final value of <span class="arithmatex">\(g\)</span>. Similarly, the stopwatch had a precision of 0.01 seconds, which contributes to the uncertainty in the timing measurements. The standard deviation of our 10 time measurements reflects the random errors in our timing, likely due to human reaction time and slight variations in the pendulum's swing. The uncertainty in the mean time was calculated to be smaller than the standard deviation, as expected for multiple measurements.</p>
+<p>The calculated value of <span class="arithmatex">\(g\)</span> was <span class="arithmatex">\(9.74 \pm 0.04 , \text{m/s}^2\)</span>, which is slightly lower than the standard value of <span class="arithmatex">\(9.81 , \text{m/s}^2\)</span>. The percentage difference is approximately 0.7%. The uncertainty range of our measurement (<span class="arithmatex">\(9.70 , \text{m/s}^2\)</span> to <span class="arithmatex">\(9.78 , \text{m/s}^2\)</span>) does not fully encompass the standard value, suggesting potential systematic errors or underestimated uncertainties.</p>
+<p>Assumptions made during the experiment include that the pendulum behaves as a simple pendulum with a point mass and a massless string, and that the oscillations are small (<span class="arithmatex">\(&lt; 15^\circ\)</span>). Deviations from these assumptions could introduce systematic errors. For instance, the weight used has a physical size, not a point mass, and the string has some mass, both of which can slightly affect the period. Air resistance, although likely small for our setup, could also have a minor effect. Future experiments could aim to minimize these effects by using a denser, smaller weight and conducting the experiment in a vacuum. Increasing the number of timing measurements could further reduce the random error component of the uncertainty."</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../../6%20Statistics/Problem_2/" title="Problem 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-left" href="../../6%20Statistics/Problem_2/" title="Estimating Pi using Monte Carlo Methods"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../../../2%20Mathematics/1%20Linear_algebra/" title="Linear Algebra">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
